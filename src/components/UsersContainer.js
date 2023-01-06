@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchUsers } from "../redux";
 import axios from "axios";
 import Button from "@mui/material/Button";
-import { palette, Container } from "@mui/system";
+import { Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import './styles.css';
 
@@ -12,7 +12,7 @@ import './styles.css';
 function UsersContainer({ userData, fetchUsers }) {
   useEffect(() => {
     fetchUsers();
-  }, []);
+  }, [fetchUsers]);
 
   const [userName, setUserName] = useState("Name");
   const [userEmail, setUserEmail] = useState("Email");
